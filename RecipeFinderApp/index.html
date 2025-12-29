@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastel Recipe Finder</title>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- SEARCH + FILTERS -->
+  <div class="search-section">
+    <input id="ingredients" placeholder="chicken, rice, garlic" />
+
+    <select id="diet">
+      <option value="">Any Diet</option>
+      <option value="balanced">Balanced</option>
+      <option value="high-protein">High Protein</option>
+      <option value="low-fat">Low Fat</option>
+    </select>
+
+    <select id="cuisine">
+      <option value="">Any Cuisine</option>
+      <option value="mexican">Mexican</option>
+      <option value="italian">Italian</option>
+      <option value="asian">Asian</option>
+    </select>
+
+    <button id="searchBtn">Search</button>
+    <button id="randomBtn" class="random-btn">🎲 Surprise Me!</button>
+  </div>
+
+  <!-- VIEW TOGGLE -->
+  <div class="view-toggle">
+    <button id="toggleViewBtn">🔲 Grid View</button>
+  </div>
+
+  <!-- FAVORITES PAGE TOGGLE -->
+  <div class="page-toggle">
+    <button id="togglePageBtn">⭐ All Recipes</button>
+  </div>
+
+  <!-- RESULTS GRID -->
+  <div id="results" class="results-grid"></div>
+
+  <!-- DETAIL MODAL -->
+  <div id="detailModal" class="modal">
+    <div class="modal-content" id="detailContent"></div>
+    <button id="detailCloseBtn" class="modal-close">Close</button>
+  </div>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+</body>
+</html>
