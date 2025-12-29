@@ -1,0 +1,409 @@
+/* --------------------------------------------------
+   GLOBAL STYLES
+-------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    #d9c7f3,
+    #ffd6c9,
+    #cfe8ff,
+    #d4f7e4
+  );
+  color: #444;
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+  color: #555;
+  letter-spacing: 1px;
+  font-family: 'Times New Roman', Times, serif
+}
+
+/* Pastel reusable background */
+.pastel-bg {
+  background: linear-gradient(
+    180deg,
+    #d9c7f3,
+    #ffd6c9,
+    #cfe8ff,
+    #d4f7e4
+  );
+}
+
+/* --------------------------------------------------
+   NAVIGATION BAR
+-------------------------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    90deg,
+    #d9c7f3,
+    #ffd6c9,
+    #cfe8ff,
+    #d4f7e4
+  );
+  color: #444;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #555;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: #333;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #555;
+  transition: 0.3s;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      #d9c7f3,
+      #ffd6c9,
+      #cfe8ff,
+      #d4f7e4
+    );
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    display: none;
+    border-radius: 0 0 0 12px;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #cfe8ff, #d9c7f3);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: floaty 4s ease-in-out infinite;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+
+.cta-btn {
+  background: #ffd6c9;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #d4f7e4;
+}
+
+/* Animated pastel button */
+.pastel-btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #444;
+  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
+  background-size: 300% 300%;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.pastel-btn:hover {
+  background-position: 100% 0;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pastel-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+.pastel-btn.outline {
+  border: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+/* --------------------------------------------------
+   ABOUT SECTION
+-------------------------------------------------- */
+
+#about {
+  background: linear-gradient(
+    180deg,
+    #F5C4DE
+  );
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------
+   PROJECTS SECTION
+-------------------------------------------------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
+  background-size: 300% 300%;
+  transition: all 0.4s ease;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 6px solid #d9c7f3;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.project-card:hover {
+  background-position: 100% 0;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-left-color: #ffd6c9;
+}
+
+
+.project-card:active {
+  transform: scale(0.97);
+}
+
+
+/* --------------------------------------------------
+   CONTACT SECTION
+-------------------------------------------------- */
+
+#contact {
+  text-align: center;
+  padding: 5rem 2rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* --------------------------------------------------
+   UTILITIES
+-------------------------------------------------- */
+
+.soft-shadow {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.soft-shadow-hover:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.border-lavender { border: 3px solid #d9c7f3; }
+.border-peach { border: 3px solid #ffd6c9; }
+.border-blue { border: 3px solid #cfe8ff; }
+.border-mint { border: 3px solid #d4f7e4; }
+
+.rounded {
+  border-radius: 12px;
+}
+
+/* --------------------------------------------------
+   ANIMATIONS
+-------------------------------------------------- */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: floaty 4s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.glow {
+  animation: pastelGlow 3s ease-in-out infinite;
+}
+
+@keyframes pastelGlow {
+  0% { box-shadow: 0 0 0px rgba(217,199,243,0.4); }
+  50% { box-shadow: 0 0 20px rgba(255,214,201,0.6); }
+  100% { box-shadow: 0 0 0px rgba(217,199,243,0.4); }
+}
+
+.animated-bg {
+  background: linear-gradient(135deg, #d9c7f3, #ffd6c9, #cfe8ff, #d4f7e4);
+  background-size: 400% 400%;
+  animation: pastelShift 12s ease infinite;
+}
+
+@keyframes pastelShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --------------------------------------------------
+   PASTEL FOOTER
+-------------------------------------------------- */
+
+.pastel-footer {
+  background: linear-gradient(
+    90deg,
+    #d9c7f3
+  );
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.6);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.pastel-footer p {
+  margin: 0;
+  font-weight: 600;
+  color: #555;
+}
+
+.footer-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-icons a {
+  color: #555;
+  font-size: 1.4rem;
+  transition: 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #333;
+  transform: scale(1.2);
+}
+
+/* --------------------------------------------------
+   BACK TO TOP BUTTON
+-------------------------------------------------- */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #444;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  display: none; /* hidden until scroll */
+  transition: 0.3s ease;
+  animation: floaty 4s ease-in-out infinite;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px) scale(1.1);
+}

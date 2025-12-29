@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>My Personal Portfolio Website</title>
+</head>
+
+<body>
+
+    <section id="home" class="hero">
+        <h1><i class="fa-solid fa-heart"></i>Hello, I'm Gabriella Valle<i class="fa-solid fa-heart"></i></h1>
+        <p>Web Developer in the making — building beautiful, functional experiences.</p>
+        <a href="#projects" class="cta-btn">See My Work</a>
+    </section>
+    <nav class="navbar">
+        <div class="logo">Gabriella Valle</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-star"></i> About</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section id="about">
+        <h2><i class="fa-solid fa-moon"></i>About Me<i class="fa-solid fa-moon"></i></h2>
+        <p>
+            I'm a passionate learner transitioning into web development. I love building
+            creative, colorful, and meaningful digital experiences.
+        </p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card soft-shadow border-peach rounded">
+                <h3><i class="fa-solid fa-spoon"></i>Recipe Finder App</h3>
+                <p>A simple recipe app using API data.</p>
+            </div>
+
+            <div class="project-card soft-shadow border-peach rounded">
+                <h3><i class="fa-solid fa-cloud"></i> Weather App</h3>
+                <p>A simple weather app using API data.</p>
+            </div>
+
+            <div class="project-card soft-shadow border-peach rounded">
+                <h3><i class="fa-solid fa-computer"></i>Portfolio Website</h3>
+                <p>The site you're looking at right now!</p>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="pastel-bg">
+        <h2>Contact Me</h2>
+        <p>Let's build something beautiful together.</p>
+        <a href="mailto:your-email@example.com" class="pastel-btn outline">Email Me</a>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    </script>
+    <script>
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<footer class="pastel-footer">
+  <p>Made with love by Gabriella Valle</p>
+  <div class="footer-icons">
+    <a href="#"><i class="fa-brands fa-github"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</footer>
+<button id="backToTop" class="back-to-top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+</body>
+</html>
