@@ -407,3 +407,35 @@ h1, h2, h3 {
 .back-to-top:hover {
   transform: translateY(-4px) scale(1.1);
 }
+
+/* --------------------------------------------------
+   PROJECT LINK
+-------------------------------------------------- */
+
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.project-card {
+  min-height: 150px; /* adjust until all cards match */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card p {
+  flex-grow: 1; /* makes descriptions fill space evenly */
+}
+
+
+.project-card-link:hover project-card-link{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(255, 182, 193, 0.35);
+  transition: 0.25s ease;
+}
+
+

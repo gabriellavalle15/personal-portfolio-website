@@ -10,7 +10,6 @@ fetch(`http://localhost:3000/recipes?q=${ingredients}`)
  *******************************/
 const ingredientsInput = document.getElementById("ingredients");
 const dietSelect = document.getElementById("diet");
-const cuisineSelect = document.getElementById("cuisine");
 const searchBtn = document.getElementById("searchBtn");
 const resultsContainer = document.getElementById("results");
 
@@ -95,8 +94,6 @@ async function fetchRecipes() {
       label: meal.strMeal,
       image: meal.strMealThumb,
       url: meal.strSource || meal.strYoutube || "#",
-      cuisineType: [meal.strArea],
-      calories: 0, // TheMealDB doesn't provide calories
       ingredientLines: extractIngredients(meal),
       dietLabels: [],
       healthLabels: [],
