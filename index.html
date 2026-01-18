@@ -12,12 +12,10 @@
 
 <body>
     <section id="home" class="hero">
-        <h1><i class="fa-solid fa-heart"></i>Hello, I'm Gabriella Valle<i class="fa-solid fa-heart"></i></h1>
+        <h1>Hello, I'm Gabriella Valle !</h1>
         <p>Web Developer in the making! I am building beautiful, functional experiences.</p>
-        <a href="#projects" class="cta-btn">See My Work</a>
     </section>
     <nav class="navbar">
-        <div class="logo">Gabriella Valle</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="#about"><i class="fa-solid fa-star"></i> About</a></li>
@@ -35,8 +33,8 @@
     <section id="about">
         <h2><i class="fa-solid fa-moon"></i>About Me<i class="fa-solid fa-moon"></i></h2>
         <p>
-            I'm a passionate learner transitioning into web development. I love building
-            creative, colorful, and meaningful digital experiences.
+            I am currently a student at Southern Careers Institute! I am passionate about 
+            web development and I am currently learning HTML, CSS, and JavaScript. I am so excited for what the future holds!
         </p>
     </section>
     <section id="projects">
@@ -45,32 +43,38 @@
         <div class="project-grid">
 
             <a href="RecipeFinderApp/" target="_blank" class="project-card-link">
-              <div class="project-card soft-shadow border-peach rounded">
+              <div class="project-card soft-shadow border-pink rounded">
                 <h3><i class="fa-solid fa-spoon"></i> Recipe Finder App</h3>
                   <p>A recipe search tool with a Surprise Me button, favorites, animated hearts, and a clean UI.</p>
               </div>
             </a>
 
             <a href="https://gabriellavalle15.github.io/Weather-App/" target="_blank" class="project-card-link">
-              <div class="project-card soft-shadow border-peach rounded">
+              <div class="project-card soft-shadow border-pink rounded">
               <h3><i class="fa-solid fa-cloud"></i> Weather App</h3>
               <p>A simple weather app using API data to display current weather.</p>
               </div>
             </a>
 
 
-            <div class="project-card soft-shadow border-peach rounded">
+            <div class="project-card soft-shadow border-pink rounded">
                 <h3><i class="fa-solid fa-computer"></i>Portfolio Website</h3>
                 <p>The site you're looking at right now!</p>
             </div>
 
         </div>
     </section>
-    <section id="contact" class="pastel-bg">
-        <h2>Contact Me</h2>
-        <p>Let's build something beautiful together.</p>
-        <a href="mailto:your-email@example.com" class="pastel-btn outline">Email Me</a>
     </section>
+    <section id="contact" class="pastel-bg">
+      <h2>Contact Me</h2>
+      <p>Let's build something beautiful together.</p>
+      <a href="mailto:gabbypena415@icloud.com?subject=Portfolio Inquiry&body=Hi Gabriella,%0D%0A%0D%0AI'm reaching out about..."
+        class="pastel-btn outline">
+        Email Me
+      </a>
+
+    </section>
+
 
     <script src="script.js"></script>
     <script>
@@ -81,31 +85,12 @@
             navLinks.classList.toggle("open");
         });
     </script>
-    <script>
-  const backToTop = document.getElementById("backToTop");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTop.style.display = "block";
-    } else {
-      backToTop.style.display = "none";
-    }
-  });
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
 <footer class="pastel-footer">
-  <p>Made with love by Gabriella Valle</p>
+  <p>Made with love by Gabriella Valle <i class="fa-solid fa-heart"></i></p>
   <div class="footer-icons">
-    <a href="#"><i class="fa-brands fa-github"></i></a>
-    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://github.com/gabriellavalle15"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/gabriella-valle-0b9bba260/"><i class="fa-brands fa-linkedin"></i></a>
   </div>
 </footer>
-<button id="backToTop" class="back-to-top">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
-
 </body>
 </html>

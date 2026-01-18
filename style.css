@@ -9,15 +9,13 @@ html {
 body {
   margin: 0;
   background: linear-gradient(
-    180deg,
+    270deg,
     #d9c7f3,
-    #ffd6c9,
-    #cfe8ff,
-    #d4f7e4
+    #cfe8ff
   );
   color: #444;
   font-family: 'Times New Roman', Times, serif;
-  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
+  background: linear-gradient(270deg, #d9c7f3, #cfe8ff);
 }
 
 section {
@@ -33,11 +31,9 @@ h1, h2, h3 {
 /* Pastel reusable background */
 .pastel-bg {
   background: linear-gradient(
-    180deg,
+    270deg,
     #d9c7f3,
-    #ffd6c9,
-    #cfe8ff,
-    #d4f7e4
+    #cfe8ff
   );
 }
 
@@ -47,29 +43,15 @@ h1, h2, h3 {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;  
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(
-    90deg,
-    #d9c7f3,
-    #ffd6c9,
-    #cfe8ff,
-    #d4f7e4
-  );
+  background: linear-gradient(90deg, #d9c7f3, #cfe8ff);
   color: #444;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
   animation: fadeInUp 1s ease forwards;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #555;
 }
 
 .nav-links {
@@ -88,7 +70,7 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(242, 160, 215, 0.35);
   color: #333;
 }
 
@@ -114,11 +96,9 @@ h1, h2, h3 {
     top: 70px;
     right: 0;
     background: linear-gradient(
-      180deg,
+      270deg,
       #d9c7f3,
-      #ffd6c9,
-      #cfe8ff,
-      #d4f7e4
+      #cfe8ff
     );
     width: 200px;
     flex-direction: column;
@@ -145,7 +125,7 @@ h1, h2, h3 {
 .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: linear-gradient(180deg, #cfe8ff, #d9c7f3);
+  background: linear-gradient(270deg, #cfe8ff, #d9c7f3);
   animation: fadeInUp 1.2s ease forwards;
 }
 
@@ -165,20 +145,6 @@ h1, h2, h3 {
    BUTTONS
 -------------------------------------------------- */
 
-.cta-btn {
-  background: #ffd6c9;
-  padding: 0.8rem 1.6rem;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.cta-btn:hover {
-  background: #d4f7e4;
-}
-
 /* Animated pastel button */
 .pastel-btn {
   display: inline-block;
@@ -187,7 +153,7 @@ h1, h2, h3 {
   font-weight: 600;
   text-decoration: none;
   color: #444;
-  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
+  background: #F7DFF0;
   background-size: 300% 300%;
   transition: all 0.4s ease;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
@@ -197,6 +163,7 @@ h1, h2, h3 {
   background-position: 100% 0;
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: white;
 }
 
 .pastel-btn:active {
@@ -205,17 +172,21 @@ h1, h2, h3 {
 }
 
 .pastel-btn.outline {
-  border: 3px solid rgba(255, 255, 255, 0.6);
+  border: 3px solid  rgba(242, 160, 215, 0.35);
 }
 
+.pastel-btn.outline:hover {
+  border: 3px solid white;
+}
 /* --------------------------------------------------
    ABOUT SECTION
 -------------------------------------------------- */
 
 #about {
   background: linear-gradient(
-    180deg,
-    #F5C4DE
+    270deg,
+    #cfe8ff,
+    #d9c7f3
   );
   text-align: center;
   animation: fadeInUp 1s ease forwards;
@@ -229,6 +200,11 @@ h1, h2, h3 {
 /* --------------------------------------------------
    PROJECTS SECTION
 -------------------------------------------------- */
+#projects {
+  background: linear-gradient(270deg, #cfe8ff, #d9c7f3);
+  padding: 4rem 2rem;
+  text-align: center;
+}
 
 .project-grid {
   display: grid;
@@ -238,22 +214,19 @@ h1, h2, h3 {
 }
 
 .project-card {
-  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
+  background: #F7DFF0;
   background-size: 300% 300%;
   transition: all 0.4s ease;
   border-radius: 12px;
   padding: 1.5rem;
-  border-left: 6px solid #d9c7f3;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
-
-
 
 .project-card:hover {
   background-position: 100% 0;
   transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  border-left-color: #ffd6c9;
+  box-shadow: 0 10px 20px rgba(242, 160, 215, 0.35);
+  border-color: white;
 }
 
 
@@ -268,8 +241,8 @@ h1, h2, h3 {
 
 #contact {
   text-align: center;
-  padding: 5rem 2rem;
   animation: fadeInUp 1s ease forwards;
+  background: linear-gradient(90deg, #d9c7f3, #cfe8ff);
 }
 
 /* --------------------------------------------------
@@ -284,11 +257,9 @@ h1, h2, h3 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
   transform: translateY(-4px);
 }
-
-.border-lavender { border: 3px solid #d9c7f3; }
-.border-peach { border: 3px solid #ffd6c9; }
 .border-blue { border: 3px solid #cfe8ff; }
-.border-mint { border: 3px solid #d4f7e4; }
+.border-lavender { border: 3px solid #d9c7f3; }
+.border-pink { border: 3px solid #F2C2E2; }
 
 .rounded {
   border-radius: 12px;
@@ -327,12 +298,12 @@ h1, h2, h3 {
 
 @keyframes pastelGlow {
   0% { box-shadow: 0 0 0px rgba(217,199,243,0.4); }
-  50% { box-shadow: 0 0 20px rgba(255,214,201,0.6); }
+  50% { box-shadow: 0 0 20px rgba(242,160,215,0.6); }
   100% { box-shadow: 0 0 0px rgba(217,199,243,0.4); }
 }
 
 .animated-bg {
-  background: linear-gradient(135deg, #d9c7f3, #ffd6c9, #cfe8ff, #d4f7e4);
+  background: linear-gradient(270deg, #d9c7f3, #cfe8ff);
   background-size: 400% 400%;
   animation: pastelShift 12s ease infinite;
 }
@@ -349,13 +320,11 @@ h1, h2, h3 {
 
 .pastel-footer {
   background: linear-gradient(
-    90deg,
+    270deg,
+    #cfe8ff,
     #d9c7f3
   );
   text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
-  border-top: 2px solid rgba(255, 255, 255, 0.6);
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -384,31 +353,6 @@ h1, h2, h3 {
 }
 
 /* --------------------------------------------------
-   BACK TO TOP BUTTON
--------------------------------------------------- */
-
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: linear-gradient(135deg, #ffd6c9, #d9c7f3, #cfe8ff, #d4f7e4);
-  border: none;
-  padding: 0.8rem 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: #444;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  display: none; /* hidden until scroll */
-  transition: 0.3s ease;
-  animation: floaty 4s ease-in-out infinite;
-}
-
-.back-to-top:hover {
-  transform: translateY(-4px) scale(1.1);
-}
-
-/* --------------------------------------------------
    PROJECT LINK
 -------------------------------------------------- */
 
@@ -420,21 +364,19 @@ h1, h2, h3 {
 }
 
 .project-card {
-  min-height: 150px; /* adjust until all cards match */
-  padding: 20px;
+  min-height: 150px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .project-card p {
-  flex-grow: 1; /* makes descriptions fill space evenly */
+  flex-grow: 1;
 }
 
 
 .project-card-link:hover project-card-link{
   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(255, 182, 193, 0.35);
   transition: 0.25s ease;
 }
 
